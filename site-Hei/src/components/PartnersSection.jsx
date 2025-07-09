@@ -1,67 +1,77 @@
 import React from 'react';
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import heiLogo from '../assets/images/logo-hei.png'; // remplace le chemin selon ton projet
 
-const PartnersSection = () => {
-  const partners = [
-    [
-      { name: 'Nexta', logo: 'src/assets/images/LOGO-NEXTA-1536x862.webp' },
-      { name: 'Passerelles Numériques', logo: 'src/assets/images/PN_Logo_baseline_color_ENG.png' },
-      { name: 'Yooz', logo: 'src/assets/images/Yooz-2023-Logo-2.webp' },
-      { name: 'Etech', logo: 'src/assets/images/logo-etech.png' },
-      { name: 'EMIT', logo: 'src/assets/images/logo_emit.png' }
-    ],
-    [
-      { name: 'Numer', logo: 'src/assets/images/Logo-Numer-vf.png' },
-      { name: 'Partners', logo: 'src/assets/images/bp-logo-full-1536x497.webp' },
-      { name: 'YIF', logo: 'src/assets/images/YIF_LOGO_512x512_BL_on_WH-1.webp' },
-      { name: 'Kante', logo: 'src/assets/images/logo-kante-company-1.png' }
-    ]
-  ];
-
+export default function Footer() {
   return (
-    <div className="bg-white py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Titre */}
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
-          Nos partenaires
-        </h2>
-        
-        {/* Sous-titre */}
-        <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-          L'employabilité de nos étudiants se base sur la pertinence de notre programme pédagogique et de la composition de notre corps 
-          enseignant mais aussi du soutien et la collaboration des entreprises partenaires
-        </p>
+    <footer className="w-full">
+      {/* Fond bleu sur toute la largeur */}
+      <div className="w-full bg-[#00194A] text-white">
+        {/* Contenu centré */}
+        <div className="w-full max-w-[1600px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-        {/* Logos des partenaires */}
-        <div className="space-y-12">
-          {/* Première rangée */}
-          <div className="flex items-center justify-center gap-10 md:gap-16 flex-wrap">
-            {partners[0].map((partner, index) => (
-              <div key={index} className="flex items-center justify-center h-24 w-40">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          {/* Colonne 1: Logo + Texte */}
+          <div>
+            <img src={heiLogo} alt="HEI Logo" className="h-20 mb-6" />
+            <p className="mb-4 text-base leading-relaxed">
+              Formation habilitée par l’État suivant le système LMD
+            </p>
+            <p className="text-base leading-relaxed">
+              Habilitation MESupRes<br />n°31309/2023
+            </p>
           </div>
 
-          {/* Deuxième rangée */}
-          <div className="flex items-center justify-center gap-10 md:gap-16 flex-wrap">
-            {partners[1].map((partner, index) => (
-              <div key={index} className="flex items-center justify-center h-24 w-40">
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          {/* Colonne 2: Adresse */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Adresse</h2>
+            <p className="text-base">II J 161 R Ambodivoanjo</p>
+            <p className="text-base">Ivandry Antananarivo</p>
+            <p className="text-base">101, Madagascar</p>
+          </div>
+
+          {/* Colonne 3: Navigation */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Navigation</h2>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-yellow-500 font-bold hover:text-yellow-500 transition-colors">Accueil</a>
+              </li>
+              <li>
+                <a href="#" className="text-white font-bold hover:text-yellow-500 transition-colors">Actualités</a>
+              </li>
+              <li>
+                <a href="#" className="text-white font-bold hover:text-yellow-500 transition-colors">Bourse d’études</a>
+              </li>
+              <li>
+                <a href="#" className="text-white font-bold hover:text-yellow-500 transition-colors">Inscription</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Colonne 4: Médias sociaux */}
+          <div>
+            <div className="flex items-center justify-start mb-4">
+              <h2 className="text-2xl font-bold">Médias sociaux</h2>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href="#" className="bg-yellow-500 p-3 rounded-full hover:scale-110 transition-transform">
+                <FaFacebookF className="text-white text-xl" />
+              </a>
+              <a href="#" className="bg-yellow-500 p-3 rounded-full hover:scale-110 transition-transform">
+                <FaLinkedinIn className="text-white text-xl" />
+              </a>
+              <a href="#" className="bg-yellow-500 p-3 rounded-full hover:scale-110 transition-transform">
+                <FaInstagram className="text-white text-xl" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default PartnersSection;
+      {/* Copyright section */}
+      <div className="bg-white text-center text-sm text-gray-600 py-4">
+        © HEI Madagascar
+      </div>
+    </footer>
+  );
+}

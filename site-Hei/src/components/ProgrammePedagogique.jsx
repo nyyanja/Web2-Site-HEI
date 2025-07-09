@@ -4,8 +4,8 @@ export default function ProgrammePedagogique() {
   return (
     <div className="bg-white py-16 px-6 max-w-7xl mx-auto">
       
-      {/* Image + Description côte à côte */}
-      <div className="flex flex-col lg:flex-row items-start gap-12 mb-12">
+      {/* Image + Description côte à côte, alignement vertical */}
+      <div className="flex flex-col lg:flex-row items-center gap-12 mb-12">
         {/* Image Section */}
         <div className="flex-1">
           <img 
@@ -17,7 +17,6 @@ export default function ProgrammePedagogique() {
 
         {/* Content Section */}
         <div className="flex-1">
-          {/* Title and Description */}
           <div>
             <div className="mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">

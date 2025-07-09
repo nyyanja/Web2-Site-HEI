@@ -3,6 +3,7 @@ import './App.css'
 import AdmissionSection from './components/AdmissionSection'
 import DomainesSection from './components/DomainesSection'
 import ProgrammePedagogique from './components/ProgrammePedagogique'
+import TechLanguagesSection from './components/TechLanguagesSection'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <DomainesSection/>
     <AdmissionSection/>
     <ProgrammePedagogique/>
+    <TechLanguagesSection/>
     </>
   )
 }

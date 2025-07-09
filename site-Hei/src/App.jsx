@@ -1,6 +1,7 @@
 
 import './App.css'
 import AdmissionSection from './components/AdmissionSection'
+import DebouchesSection from './components/DeboucheSection'
 import DomainesSection from './components/DomainesSection'
 import Footer from './components/Footer'
 import PartnersSection from './components/PartnersSection'
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <>
+    <DebouchesSection/>
     <DomainesSection/>
     <AdmissionSection/>
     <ProgrammePedagogique/>

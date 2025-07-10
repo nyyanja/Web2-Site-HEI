@@ -57,7 +57,7 @@ export default function Footer() {
           {/* Colonne 4 - Médias sociaux */}
           <div>
             <h2 className="text-2xl font-bold mb-4">Médias sociaux</h2>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 justify-start">
               <a href="#" className="bg-yellow-500 p-3 rounded-full hover:bg-yellow-400 hover:scale-110 transition-all duration-200">
                 <FaFacebookF className="text-white text-xl" />
               </a>

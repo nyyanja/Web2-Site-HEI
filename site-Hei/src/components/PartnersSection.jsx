@@ -21,7 +21,7 @@ const PartnersSection = () => {
     <div className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Titre */}
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-center text-blue-900 mb-4">
           Nos partenaires
         </h2>
         

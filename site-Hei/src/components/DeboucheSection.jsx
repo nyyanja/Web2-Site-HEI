@@ -16,7 +16,7 @@ const DebouchesSection = () => {
 
         {/* Texte à gauche */}
         <div className="md:w-1/2">
-          <h2 className="text-4xl font-bold text-blue-800 mb-6">Quelques débouchés</h2>
+          <h2 className="text-5xl font-bold text-blue-900 mb-6">Quelques débouchés</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             Formez-vous à une panoplie de métiers du numérique avec nous et venez acquérir les fondements de la programmation (qui vous servira pour les différents métiers) ! Ce sont des métiers porteurs, des métiers du présent, des métiers du futur…
           </p>

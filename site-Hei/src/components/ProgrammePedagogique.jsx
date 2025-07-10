@@ -19,7 +19,7 @@ export default function ProgrammePedagogique() {
         <div className="flex-1">
           <div>
             <div className="mb-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+              <h2 className="text-3xl lg:text-4xl font-bold text-blue-900">
                 Le programme pédagogique
               </h2>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 export default function AdmissionSection() {
   return (
     <div 
-      className="min-h-screen bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center p-8"
+      className="min-h-screen bg-[#6586C7] flex items-center justify-center p-8"
       style={{
         width: "100vw",
         position: "relative",

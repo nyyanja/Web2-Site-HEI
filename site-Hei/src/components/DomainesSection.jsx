@@ -21,7 +21,7 @@ const DomainesSection = () => {
 
         {/* Titre principal */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#001948] mb-6">Domaines</h2>
+          <h2 className="text-4xl font-bold text-blue-900 mb-6">Domaines</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Au cours de vos trois ans de formation, naviguez entre les domaines les plus porteurs du numérique du présent et de l'avenir :
           </p>

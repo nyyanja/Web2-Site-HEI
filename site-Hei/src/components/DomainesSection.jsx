@@ -7,7 +7,7 @@ import devImg from "../assets/images/Ingenierie-logicielle_Plan-de-travail-1-1-6
 const DomainesSection = () => {
   return (
     <section
-      className="bg-gray-200 py-16"
+      className="w-full bg-gray-200 py-16"
       style={{
         width: "100vw",
         position: "relative",

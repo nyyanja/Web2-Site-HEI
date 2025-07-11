@@ -25,7 +25,7 @@ const PartnersSection = () => {
         </h1>
         
         {/* Sous-titre */}
-        <p className="text-center text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
+        <p className="text-center text-lg text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
           L'employabilité de nos étudiants se base sur la pertinence de notre programme pédagogique et de la composition de notre corps 
           enseignant mais aussi du soutien et la collaboration des entreprises partenaires
         </p>

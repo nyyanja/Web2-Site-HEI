@@ -17,7 +17,7 @@ function AboutSection() {
 
         {/* Texte */}
         <div className="space-y-8 pr-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">À propos de nous</h2>
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-900 font-garamond">À propos de nous</h1>
 
           <div className="space-y-5 mb-12">
             <p className="text-2xl font-semibold text-blue-900 flex items-center gap-3">

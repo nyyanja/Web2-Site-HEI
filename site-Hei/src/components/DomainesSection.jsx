@@ -6,29 +6,17 @@ import devImg from "../assets/images/Ingenierie-logicielle_Plan-de-travail-1-1-6
 
 const DomainesSection = () => {
   return (
-    <section
-      className="w-full bg-gray-200 py-16"
-      style={{
-        width: "100vw",
-        position: "relative",
-        left: "50%",
-        right: "50%",
-        marginLeft: "-50vw",
-        marginRight: "-50vw",
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4">
-
-        {/* Titre principal */}
+    <section className="w-full bg-gray-200 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#001948] mb-6">Domaines</h2>
+          <h1 className="text-4xl font-bold text-blue-900 mb-6 font-garamond">Domaines</h1>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Au cours de vos trois ans de formation, naviguez entre les domaines les plus porteurs du numérique du présent et de l'avenir :
           </p>
         </div>
 
         {/* Grille des domaines */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {/* Cloud et cybersécurité */}
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group text-center">
@@ -70,7 +58,6 @@ const DomainesSection = () => {
           </div>
 
         </div>
-
       </div>
     </section>
   );

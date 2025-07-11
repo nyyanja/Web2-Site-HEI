@@ -55,7 +55,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
 
       <div className="relative z-10 text-white text-center px-4 max-w-5xl mx-auto h-full flex flex-col justify-center pt-20">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 leading-tight transition-all duration-500 ">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-10 leading-tight transition-all duration-500 font-garamond">
           {slides[currentSlide].title}
         </h1>
 
@@ -64,7 +64,7 @@ const HeroSection = () => {
             {slides[currentSlide].content}
           </p>
 
-          {/* ✅ BOUTONS placés ici, avant la mission */}
+          {/*BOUTONS*/}
           <div className="flex flex-col md:flex-row justify-center gap-10 items-center mb-20">
             <button className="bg-white text-blue-900 font-bold px-8 py-4 rounded shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105 min-w-[200px]">
               Inscrivez-vous ici
@@ -72,12 +72,12 @@ const HeroSection = () => {
             <button className="bg-yellow-500 text-white font-bold px-8 py-4 rounded shadow-lg hover:bg-yellow-600 transition-all transform hover:scale-105 min-w-[200px]">
               Emploi du temps
             </button>
-            <button className="bg-blue-900 text-white font-bold px-8 py-4 rounded shadow-lg hover:bg-blue-800 transition-all transform hover:scale-105 min-w-[200px]">
+            <button className="bg-[#00194A] text-white font-bold px-8 py-4 rounded shadow-lg hover:bg-blue-800 transition-all transform hover:scale-105 min-w-[200px]">
               Programme pédagogique
             </button>
           </div>
 
-          {/* ✅ habilitaion déplacée en bas */}
+          {/*habilitaion*/}
           <p className="text-lg md:text-xl font-semibold transition-all duration-500">
             {slides[currentSlide].habilitation}
           </p>

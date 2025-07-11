@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Import des images
 import MiradoImg from "../assets/images/Mirado-600x600.webp";
 import JulienImg from "../assets/images/Julien-600x600.webp";
 import RyanImg from "../assets/images/ryan-min-600x600.webp";
@@ -57,12 +56,11 @@ function TeamSection() {
     },
   ];
 
-  // Créer un tableau avec des copies pour la boucle infinie
-  // On ajoute les 3 derniers au début et les 3 premiers à la fin
+
   const extendedMembers = [
-    ...teamMembers.slice(-3), // Les 3 derniers membres au début
+    ...teamMembers.slice(-3),
     ...teamMembers,
-    ...teamMembers.slice(0, 3), // Les 3 premiers membres à la fin
+    ...teamMembers.slice(0, 3),
   ];
 
   const totalSlides = teamMembers.length;
@@ -70,7 +68,6 @@ function TeamSection() {
   // Gérer la transition infinie
   useEffect(() => {
     if (currentSlide < 0) {
-      // Si on va en arrière au-delà du premier, aller à la fin sans animation
       const timer = setTimeout(() => {
         setIsTransitioning(true);
         setCurrentSlide(totalSlides - 1);
@@ -78,7 +75,6 @@ function TeamSection() {
       }, 500);
       return () => clearTimeout(timer);
     } else if (currentSlide >= totalSlides) {
-      // Si on va en avant au-delà du dernier, aller au début sans animation
       const timer = setTimeout(() => {
         setIsTransitioning(true);
         setCurrentSlide(0);
@@ -107,9 +103,8 @@ function TeamSection() {
     return currentSlide;
   };
 
-  // Calculer la position de translation
+  // Calculer la position de translation pour défiler une carte à la fois
   const getTranslateX = () => {
-    // Position de base + 3 cartes décalées pour compenser les copies du début
     return -((currentSlide + 3) * (100 / 3));
   };
 
@@ -117,11 +112,11 @@ function TeamSection() {
   const getRealIndex = () => getDisplayIndex();
 
   return (
-    <section className="bg-blue-500 text-white py-16 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-[#6586C7] text-white py-16 px-6 md:px-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto text-center mb-12 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white font-garamond">
           L'équipe pédagogique
-        </h2>
+        </h1>
         <p className="text-white/95 max-w-4xl mx-auto text-lg leading-relaxed">
           Notre équipe pédagogique se compose d'experts nationaux et
           internationaux de l'informatique, de la cybersécurité, de
@@ -176,7 +171,7 @@ function TeamSection() {
           </svg>
         </button>
 
-        {/* Carousel Content */}
+        {/* contenu carousel */}
         <div className="overflow-hidden rounded-2xl">
           <div
             className={`flex ${
@@ -201,7 +196,7 @@ function TeamSection() {
                         alt={member.name}
                         className="w-full h-full object-cover rounded-full"
                         onError={(e) => {
-                          // Si l'image ne se charge pas, afficher un avatar avec les initiales
+                          // Si l'image ne se charge pas
                           const initials = member.name.split(' ').map(n => n[0]).join('').substring(0, 2);
                           e.target.style.display = 'none';
                           e.target.nextSibling.style.display = 'flex';
@@ -216,9 +211,9 @@ function TeamSection() {
                     </div>
                   </div>
 
-                  {/* Member Info */}
+                  {/* Informations membres */}
                   <div className="flex-grow">
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
+                    <h3 className="text-lg md:text-xl font-bold text-blue-900 mb-2">
                       {member.name}
                     </h3>
                     <p className="text-blue-900 font-semibold mb-2 text-sm md:text-base leading-tight">
@@ -226,7 +221,7 @@ function TeamSection() {
                     </p>
 
                     {/* Optional Description */}
-                    <p className="text-gray-600 text-sm leading-relaxed overflow-hidden text-ellipsis">
+                    <p className="text-blue-900 text-sm leading-relaxed overflow-hidden text-ellipsis">
                       {member.description || ""}
                     </p>
                   </div>
@@ -238,17 +233,17 @@ function TeamSection() {
 
         {/* Dots Navigation */}
         <div className="flex justify-center mt-8 space-x-2">
-{teamMembers.map((_, index) => (
-  <button
-    key={index}
-    onClick={() => goToSlide(index)}
-    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-      index === getDisplayIndex()
-        ? "bg-white scale-125"
-        : "bg-white/50 hover:bg-white/70"
-    }`}
-    aria-label={`Aller à la diapositive ${index + 1}`}
-  />
+          {teamMembers.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === getDisplayIndex()
+                  ? "bg-white scale-125"
+                  : "bg-white/50 hover:bg-white/70"
+              }`}
+              aria-label={`Aller à la diapositive ${index + 1}`}
+            />
           ))}
         </div>
       </div>
